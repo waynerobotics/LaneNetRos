@@ -9,6 +9,7 @@
 LaneNet model post process
 """
 import os.path as ops
+import os.environ as env
 import math
 
 import cv2
@@ -251,12 +252,14 @@ class _LaneNetCluster(object):
 
         return mask, lane_coords
 
+VP = env['VERONICA_PATH']
+IPM_PATH = os.path.join(VP, "src/igvc_navigation/mapping/LaneNetRos/scripts/data/tusimple_ipm_remap.yml")
 
 class LaneNetPostProcessor(object):
     """
     lanenet post process for lane generation
     """
-    def __init__(self, cfg, ipm_remap_file_path='/home/ringo/waynerobotics/veronica/src/igvc_navigation/mapping/LaneNetRos/scripts/data/tusimple_ipm_remap.yml'):
+    def __init__(self, cfg, ipm_remap_file_path=IPM_PATH):
         """
 
         :param ipm_remap_file_path: ipm generate file path

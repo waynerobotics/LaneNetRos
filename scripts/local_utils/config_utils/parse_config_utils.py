@@ -14,7 +14,8 @@ import json
 import codecs
 from ast import literal_eval
 
-config_path_f = "/home/ringo/waynerobotics/veronica/src/igvc_navigation/mapping/LaneNetRos/scripts/config/tusimple_lanenet.yaml"
+VP = os.environ["VERONICA_PATH"]
+config_path_f = os.path.join(VP, "src/igvc_navigation/mapping/LaneNetRos/scripts/config/tusimple_lanenet.yaml")
 
 class Config(dict):
     """
