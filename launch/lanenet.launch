@@ -4,7 +4,7 @@
     <arg name="output_image" default="/lane_images"/>
     <arg name="output_lane" default="/Lane"/>
     <!-- <arg name="weight_path" default="$(find lane_detector)/model/tusimple_lanenet/tusimple_lanenet_vgg_2018-10-19-13-33-56.ckpt-200000"/> -->
-    <arg name="weight_path" default="$(find lane_detector)/model/new_model/tusimple_lanenet.ckpt"/>
+    <arg name="weight_path" default="$(find lane_detector)/model/tusimple_lanenet/tusimple_lanenet.ckpt"/>
 
     <arg name="use_gpu" default="1"/>
     <arg name="lane_image_topic" default="/lane_image"/>
