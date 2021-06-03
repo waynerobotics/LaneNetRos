@@ -8,8 +8,8 @@
 """
 LaneNet model post process
 """
+import os
 import os.path as ops
-import os.environ as env
 import math
 
 import cv2
@@ -252,7 +252,7 @@ class _LaneNetCluster(object):
 
         return mask, lane_coords
 
-VP = env['VERONICA_PATH']
+VP = os.environ['VERONICA_PATH']
 IPM_PATH = os.path.join(VP, "src/igvc_navigation/mapping/LaneNetRos/scripts/data/tusimple_ipm_remap.yml")
 
 class LaneNetPostProcessor(object):
