@@ -1,4 +1,2 @@
-model/tusimple_lanenet/*
-model/new_model/*
 *.pyc
 model/.vscode/*
